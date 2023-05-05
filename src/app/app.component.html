@@ -1,0 +1,35 @@
+<header>
+  <nav
+    [class.mobile-menu-open]="isMobileView && isMenuOpen"
+    [class.mobile-view]="isMobileView"
+    [class.hide-ea-link]="isMobileView"
+  >
+    <button class="menu-toggle" *ngIf="isMobileView" (click)="toggleMenu()">
+      <ng-container *ngIf="!isMenuOpen; else closeMenuText">
+        <i class="fa fa-bars">OPEN</i>
+      </ng-container>
+      <ng-template #closeMenuText>
+        <i class="fa fa-times">CLOSE</i>
+      </ng-template>
+    </button>
+    <a routerLink="/" *ngIf="!isMobileView" class="logo"> E/A </a>
+    <ul *ngIf="!isMobileView || isMenuOpen">
+      <li>
+        <a routerLink="/" (click)="closeMenu()">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about" (click)="closeMenu()">About</a>
+      </li>
+      <li>
+        <a routerLink="/blog" (click)="closeMenu()">Blog</a>
+      </li>
+      <li>
+        <a routerLink="/companies" (click)="closeMenu()">Companies</a>
+      </li>
+      <li>
+        <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>

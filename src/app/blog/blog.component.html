@@ -1,0 +1,9 @@
+<div class="blog-container">
+  <div class="blog-card" *ngFor="let blogPost of blogPosts">
+    <h2 class="blog-title">{{ blogPost.title }}</h2>
+    <p class="blog-summary">{{ blogPost.summary }}</p>
+    <div class="blog-readmore">
+      <a class="see-more" (click)="openBlog(blogPost.content)">See More</a>
+    </div>
+  </div>
+</div>

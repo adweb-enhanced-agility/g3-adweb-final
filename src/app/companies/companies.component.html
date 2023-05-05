@@ -1,0 +1,64 @@
+<div class="container">
+  <div
+    class="box box1"
+    (click)="toggleActive($event, 0)"
+    [class.active]="activeIndex === 0"
+  >
+    <h3>HOOLI Software</h3>
+    <div class="description" *ngIf="activeDescriptionIndex === 0">
+      Sandico, Marilao, 3019 Bulacan
+    </div>
+    <div class="hover-description">
+      HOOLI Software adopts agile practices as it is engaging a lot of big
+      projects, implementing agile practices makes the work faster as they need
+      to cope up with the line up projects
+    </div>
+  </div>
+  <div
+    class="box box2"
+    (click)="toggleActive($event, 1)"
+    [class.active]="activeIndex === 1"
+  >
+    <h3>Twist Resources</h3>
+    <div class="description" *ngIf="activeDescriptionIndex === 1">
+      Clark Center, Office Center No. 07, Berthaphil III, 2023, Jose Abad Santos
+      Ave, Angeles, Pampanga
+    </div>
+    <div class="hover-description">
+      Twist Resources implements agile in their workplace, they usually give the
+      work for their developers in forms of sprint where they have to finish the
+      work given to them in 2 wekks time.
+    </div>
+  </div>
+  <div
+    class="box box3"
+    (click)="toggleActive($event, 2)"
+    [class.active]="activeIndex === 2"
+  >
+    <h3>Inniv8</h3>
+    <div class="description" *ngIf="activeDescriptionIndex === 2">
+      Unit 27A Philexcel Business Park M.A. Roxas Highway, Clark Freeport Zone,
+      Angeles, 2009 Pampanga
+    </div>
+    <div class="hover-description">
+      Formerly known as web2rankphil doesn't implement agile in their company as
+      agile is better implemented with big projects and mostly of the projects
+      they handle are small projects.
+    </div>
+  </div>
+  <div
+    class="box box4"
+    (click)="toggleActive($event, 3)"
+    [class.active]="activeIndex === 3"
+  >
+    <h3>CloudStaff</h3>
+    <div class="description" *ngIf="activeDescriptionIndex === 3">
+      2009 MacArthur Hwy, Balibago, Angeles, 2009 Pampanga
+    </div>
+    <div class="hover-description">
+      One of the well known companies here, given that fact he company face a
+      lot of big projects and they implemented agile to cope up with the
+      workloads.
+    </div>
+  </div>
+</div>

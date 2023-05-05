@@ -1,0 +1,104 @@
+<div class="container">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="rectangle5">
+      <h1 class="contact-us">CONTACT US</h1>
+      <div class="rectangle6">
+        <div class="ob-forms">
+          <input
+            type="text"
+            placeholder="Name"
+            class="name"
+            name="name"
+            ngModel
+            required
+          />
+          <div
+            *ngIf="
+              nameError &&
+              (contactForm.submitted || contactForm.controls.name.touched)
+            "
+          >
+            {{ nameError }}
+          </div>
+          <input
+            type="email"
+            placeholder="Email"
+            class="email"
+            name="email"
+            ngModel
+            required
+            email
+          />
+          <div
+            *ngIf="
+              emailError &&
+              (contactForm.submitted || contactForm.controls.email.touched)
+            "
+          >
+            {{ emailError }}
+          </div>
+          <input
+            type="text"
+            placeholder="Subject"
+            class="subject"
+            name="subject"
+            ngModel
+            required
+          />
+          <div
+            *ngIf="
+              subjectError &&
+              (contactForm.submitted || contactForm.controls.subject.touched)
+            "
+          >
+            {{ subjectError }}
+          </div>
+          <textarea
+            placeholder="Details"
+            class="details"
+            name="details"
+            ngModel
+            required
+          ></textarea>
+          <div
+            *ngIf="
+              detailsError &&
+              (contactForm.submitted || contactForm.controls.details.touched)
+            "
+          >
+            {{ detailsError }}
+          </div>
+          <button type="submit" class="submit" [disabled]="!contactForm.valid">
+            Submit
+          </button>
+          <div *ngIf="isSubmitted">
+            <p>Form submitted successfully!</p>
+          </div>
+        </div>
+        <div class="location">
+          <img
+            src="https://www.pngkey.com/png/full/235-2350342_location-white-location-icon-with-transparent-background.png"
+            alt="Location Logo"
+          />
+          <p class="location-text">
+            Cecilia Chapman<br />711-2880 Nulla St.<br />Mankato Mississippi
+          </p>
+        </div>
+        <div class="phone">
+          <img
+            src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/phone-icon-18-256.png"
+            alt="Phone Logo"
+          />
+          <p class="phone-text">(257) 563-7401</p>
+        </div>
+        <div class="mail">
+          <img
+            src="https://vectorified.com/images/email-icon-white-png-38.png"
+            alt="Mail Logo"
+          />
+          <p class="mail-text">email@sample.com</p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

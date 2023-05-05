@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.5s ease;
+  text-shadow: 0px 0px 15px black, 0px 0px 5px black, 0px 0px 2px black;
+}
+
+.box1 {
+  background-image: url(https://scontent.fcrk1-5.fna.fbcdn.net/v/t1.15752-9/344777617_898644681211790_2259578370606909343_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=VI_J8zF2pl0AX9UFafv&_nc_ht=scontent.fcrk1-5.fna&oh=03_AdTAF5q7v0ExuSbCVy5Ekt23r4F8LwSjNv-Mj5CsAqc82w&oe=6479D81D);
+}
+
+.box2 {
+  background-image: url(https://scontent.fcrk1-5.fna.fbcdn.net/v/t1.15752-9/345045247_1596945510800591_4331952484529226662_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=rB5iYl6LpDMAX-w-hP8&_nc_ht=scontent.fcrk1-5.fna&oh=03_AdQMEeq2j1C5WGzOHA04VHdifWnk9mfikno4QfqxOhrigQ&oe=6479BCC6);
+}
+
+.box3 {
+  background-image: url(https://scontent.fcrk1-3.fna.fbcdn.net/v/t1.15752-9/343013865_3676704299224142_7119151534814019517_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=L0Uwo6uAmrgAX8ro0mU&_nc_ht=scontent.fcrk1-3.fna&oh=03_AdT9poZiX7yVohjRW4pISQN543Yya_Yk8H3Jim_2dySXig&oe=6479B7B2);
+}
+
+.box4 {
+  background-image: url(https://s3-ap-southeast-1.amazonaws.com/kalibrr-company-assets/logos/DQQ8PG2G58HER3B8J58M-5880130f.jpg);
+}
+
+.box5 {
+  background-image: url(emerging-tech-roles-to-consider-2022-970x388.jpg);
+}
+
+.box6 {
+  background-image: url(photo-1531297484001-80022131f5a1.jpg);
+}
+
+.description {
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.box:hover .description {
+  display: none;
+}
+
+.box:hover .hover-description {
+  display: block;
+  margin-top: 10px;
+}
+
+.hover-description {
+  display: none;
+}
+
+.box.active .description {
+  display: block;
+}
+
+.box.active {
+  height: 500px;
+}
+
+.box:hover .description {
+  display: block;
+}
+
+.box:hover::before {
+  content: attr(data-description);
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.box.active::before {
+  content: none;
+}

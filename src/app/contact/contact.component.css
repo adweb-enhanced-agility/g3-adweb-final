@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rectangle5 {
+  background: #60abff;
+  box-shadow: 0 8px 16px rgba(96, 171, 255, 0.3);
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contact-us {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.rectangle6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.ob-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ob-forms input,
+.ob-forms textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.ob-forms textarea {
+  height: 150px;
+}
+
+.ob-forms button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ob-forms button:hover {
+  background-color: #005fa3;
+}
+
+.location,
+.phone,
+.mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location img,
+.phone img,
+.mail img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.location-text,
+.phone-text,
+.mail-text {
+  margin: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .rectangle5 {
+    padding: 10px;
+    width: 90%;
+    max-width: none;
+    border-radius: 5px;
+  }
+
+  .contact-us {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .ob-forms {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ob-forms input,
+  .ob-forms textarea {
+    font-size: 1rem;
+  }
+
+  .location img,
+  .phone img,
+  .mail img {
+    width: 30px;
+    margin-bottom: 5px;
+  }
+
+  .location-text,
+  .phone-text,
+  .mail-text {
+    margin: 5px;
+    font-size: 1rem;
+  }
+}
